@@ -1,0 +1,893 @@
+@charset "UTF-8";
+
+html {
+  font-size: 100%;
+}
+body {
+  color: #333;
+  background-color: #f5f3f0;
+  font-size: 0.75rem;
+  font-family: 'Raleway', sans-serif;
+}
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+li {
+  list-style: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+main {
+  margin-bottom: 30px;
+}
+h2 {
+  text-align: center;
+  padding: 1em 0;
+}
+form {
+  padding: 0 1.5em;
+}
+.site-title {
+  width: 109px;
+  line-height: 1px;
+  margin: 0px auto 10px auto;
+}
+.site-title a {
+  display: block;
+}
+.wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.content {
+  width: 100%;
+}
+
+#slider {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+.section-title {
+  width: 109px;
+  line-height: 1px;
+  margin: 60px auto 30px auto;
+  font-size: 250%;
+}
+.content-title {
+  text-align: center;
+  line-height: 1px;
+  margin: 10px auto 10px auto;
+}
+.copyright{
+  text-align: center;
+}
+
+/*-------------------------------------------
+ヘッダー
+-------------------------------------------*/
+#header {
+  max-width: 1000px;
+  padding: 10px 0 0 0;
+  margin: 0 auto 10px auto;
+}
+nav{
+  border-bottom: 1px solid #2f1e09;
+  }
+nav .wrapper {
+  width: 100%;
+}
+nav ul{
+display: table;
+margin:  0 auto;
+padding: 0;
+width: 100%;
+text-align: center;
+}
+nav ul li{
+display: table-cell;
+min-width: 50px;
+/* border-right: 1px solid #2f1e09; */
+}
+nav ul li a{
+display: block;
+width: 100%;
+padding: 10px 0;
+text-decoration: none;
+color: #794915;
+}
+nav ul li a:hover{
+background-color:#fefefe;
+border-bottom: 5px solid #794915;
+color: #2f1e09;
+}
+nav ul li.current{
+font-weight: bold;
+}
+
+.form-footer a {
+  color: #f16272;
+  text-decoration: none;
+}
+/*-------------------------------------------
+スライド
+-------------------------------------------*/
+#slider .prev,
+#slider .next {
+  width: 40px;
+  height: 40px;
+  background-color: #fefefe;
+  cursor: pointer;
+  opacity: 0.7;
+  position: absolute;
+  top: 45%;
+  transition: 0.5s;
+  z-index: 10;
+}
+#slider .prev:hover,
+#slider .next:hover {
+  opacity: 0.5;
+}
+#slider .prev::before,
+#slider .prev::after,
+#slider .next::before,
+#slider .next::after {
+  content: "";
+  display: block;
+  width: 14px;
+  height: 2px;
+  background-color: #000;
+  position: absolute;
+}
+
+/*
+スライダー左矢印
+*/
+#slider .prev {
+  left: 0;
+}
+#slider .prev::before,
+#slider .prev::after {
+  left: 12px;
+}
+#slider .prev:before {
+  top: 37%;
+  transform: rotate(-45deg);
+}
+#slider .prev:after {
+  bottom: 37%;
+  transform: rotate(45deg);
+}
+
+/*
+スライダー右矢印
+*/
+#slider .next {
+  right: 0;
+}
+#slider .next::before,
+#slider .next::after {
+  right: 12px;
+}
+#slider .next:before {
+  top: 37%;
+  transform: rotate(45deg);
+}
+#slider .next:after {
+  bottom: 37%;
+  transform: rotate(-45deg);
+}
+/* トップに戻るボタン */
+#page-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 14px;
+  line-height: 1;
+  z-index: 99;
+}
+#page-top a {
+  background: #83511b;
+  text-decoration: none;
+  color: #fefefe;
+  padding: 20px 20px;
+  text-align: center;
+  display: block;
+  border-radius: 90px;
+  opacity: 0.9;
+  transition: all .3s ease;
+}
+#page-top a:hover {
+  text-decoration: none;
+  opacity: .5;
+}
+/*-------------------------------------------
+新入荷
+-------------------------------------------*/
+#newproduct ul {
+  display: flex;
+  justify-content: space-between;
+}
+#newproduct li {
+  width: 32%;
+}
+#newproduct p {
+  text-align: center;
+  font-weight: bold;
+}
+
+/*-------------------------------------------
+コーヒー診断
+-------------------------------------------*/
+#diagnosi {
+  text-align: center;
+}
+.result {
+  text-align: center;
+  margin: 1rem auto;
+}
+#answer {
+  background-color: #fefefe;
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+#answer p {
+  padding-top: 0.5rem;
+}
+#gobtn {
+  margin-top: 1rem;
+  display: inline-block;
+  border-radius: 3%;          
+  font-size: 1rem;        
+  text-align: center;      
+  cursor: pointer;     
+  padding: 1rem 3rem;   
+  background: #ff3d2f;     
+  color: #fefefe;     
+  line-height: 1rem;    
+  opacity: 0.9;        
+  transition: .3s;         
+  box-shadow: 2px 2px 3px #b1b1b1;  
+}
+#gobtn:hover {
+	color: #fefefe;
+	background: #ff1100;
+}
+#goback {
+  text-align: center;
+}
+.backbtn{
+  margin-top: 1.5rem;
+  display: inline-block;
+  border-radius: 3%;          
+  font-size: 1rem;        
+  text-align: center;      
+  cursor: pointer;     
+  padding: 0.5rem 2rem;   
+  background: #7f4600;     
+  color: #fefefe;     
+  line-height: 1rem;    
+  opacity: 0.9;        
+  transition: .3s;         
+  box-shadow: 2px 2px 3px #b1b1b1;  
+}
+.backbtn:hover {
+  background: #2f1e09;
+}
+#question ul {
+text-align: center;
+}
+#question input {
+  text-align: center;
+}
+#question_about form{
+  text-align: center;
+  width: 80%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: #fefefe;
+}
+#donebtn {
+  margin-top: 0.3rem;
+  display: inline-block;
+  border-radius: 3%;          
+  font-size: 1rem;        
+  text-align: center;      
+  cursor: pointer;     
+  padding: 1rem 3rem;   
+  background: #7f4600;     
+  color: #fefefe;     
+  line-height: 1rem;    
+  opacity: 0.9;        
+  transition: .3s;         
+  box-shadow: 2px 2px 3px #b1b1b1;  
+}
+#donebtn:hover {
+	color: #fefefe;
+	background: #2f1e09;
+}
+
+#answer {
+  background-color: #fefefe;
+  text-align: center;
+}
+/*-------------------------------------------
+商品一覧
+-------------------------------------------*/
+
+#search {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid #83511b;
+  border-right: none;
+  width: 100%;
+  height: 36px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  background-color: #fefefe;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus{
+  color: #83511b;
+}
+
+.searchButton {
+  width: 40px;
+  height: 36px;
+  border: 1px solid #83511b;
+  background: #83511b;
+  text-align: center;
+  color: #fefefe;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+.searchButton input {
+  font-size: 0.5rem;
+}
+/*Resize the wrap to see the search bar change!*/
+#wrap{
+  width: 30%;
+  margin: 0 auto;
+}
+
+#table_box {
+  border-collapse:separate;
+  background-color: #fafafa;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  padding-top: 20px;
+  table-layout: fixed;
+  text-align: center;
+  width: 100%;
+}
+#table_box a {
+  color: #0008ff; 
+}
+#table_box table th{
+  text-align: center;
+  width: 50%;
+  padding: 10px 0;
+}
+#table_box table td{
+  display: flex;
+  text-align: center;
+  width: 50%;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+/*-------------------------------------------
+商品ページ
+-------------------------------------------*/
+#itemabout {
+  display: flex;
+  border-collapse:separate;
+  background-color: #fafafa;
+  margin: 20px auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  table-layout: fixed;
+  text-align: center;
+  width: 80%;
+}
+#itemabout img {
+  margin-left: 2rem;
+}
+.itemtext {
+  text-align: center;
+  width: 100%;
+}
+
+.itemtext form {
+  margin-top: 2rem;
+}
+.itemtext form p {
+  margin-top: 0.5rem;
+}
+
+.detailbtn {
+  margin-top: 1rem;
+  display: inline-block;
+  border-radius: 3%;          
+  font-size: 1rem;        
+  text-align: center;      
+  cursor: pointer;     
+  padding: 1rem 3rem;   
+  background: #83511b;     
+  color: #fefefe;     
+  line-height: 1rem;    
+  opacity: 0.9;        
+  transition: .3s;         
+  box-shadow: 2px 2px 3px #b1b1b1;  
+}
+.detailbtn:hover {
+	color: #fefefe;
+	background: #2f1e09;
+}
+
+.select-wrapper {
+  position: relative;
+  margin-top: 1rem;
+  position: relative;
+  display: inline-block;
+  border: 1px solid #2f1e09; 
+}
+
+/*-------------------------------------------
+お気に入り
+-------------------------------------------*/
+#favorite-insert {
+  text-align: center;
+}
+#favodelete{
+  text-align: center;
+  background-color: #fefefe;
+}
+/* 未ログインの場合↓ */
+#favorite-show {
+  width: 40%;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+.favobuttan{
+  margin-top: 1.5rem;
+  display: inline-block;
+  border-radius: 3%;          
+  font-size: 1rem;        
+  text-align: center;      
+  cursor: pointer;     
+  padding: 0.5rem 2rem;   
+  background: #7f4600;     
+  color: #fefefe;     
+  line-height: 1rem;    
+  opacity: 0.9;        
+  transition: .3s;         
+  box-shadow: 2px 2px 3px #b1b1b1;  
+}
+.favobuttan:hover {
+  background: #2f1e09;
+}
+/* お気に入り一覧 */
+#table_favo {
+  border-collapse:separate;
+  background-color: #fafafa;
+  margin: 1rem auto;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  table-layout: fixed;
+  text-align: center;
+  width: 300%;
+}
+#table_favo a {
+  color: #0008ff; 
+}
+#table_favo table {
+  text-align: center;
+  width: 100%;
+}
+#table_favo table th{
+  text-align: center;
+  width: 100%;
+  padding: 10px 0;
+}
+
+/*-------------------------------------------
+カート
+-------------------------------------------*/
+#cart-insert {
+  text-align: center;
+  font-size: 0.9rem;
+  background-color: #fafafa;
+}
+#cart-delete {
+  text-align: center;
+  font-size: 0.9rem;
+  background-color: #fafafa;
+}
+#table_cart {
+  border-collapse:separate;
+  background-color: #fafafa;
+  margin: 1rem auto;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  table-layout: fixed;
+  text-align: center;
+  width: 300%;
+}
+#table_cart a {
+  color: #0008ff; 
+}
+#table_cart table {
+  text-align: center;
+  width: 100%;
+}
+#table_cart table th{
+  text-align: center;
+  width: 100%;
+  padding: 10px 0;
+}
+#table_cart table td{
+  display: flex;
+  text-align: center;
+  width: 100%;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+.total {
+  font-size: 1rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+/*-------------------------------------------
+購入
+-------------------------------------------*/
+#zerocart {
+  text-align: center;
+  background-color: #fefefe;
+}
+#profile{
+  text-align: center;
+  background-color: #fefefe;
+}
+#confirmation {
+  text-align: center;
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+  background-color: #fefefe;
+}
+#confirmation p{
+  padding-bottom: 0.5rem;
+}
+.gobtn {
+  margin-top: 1rem;
+  display: inline-block;
+  border-radius: 3%;          
+  font-size: 1rem;        
+  text-align: center;      
+  cursor: pointer;     
+  padding: 1rem 3rem;   
+  background: #ff3d2f;     
+  color: #fefefe;     
+  line-height: 1rem;    
+  opacity: 0.9;        
+  transition: .3s;         
+  box-shadow: 2px 2px 3px #b1b1b1;  
+}
+.gobtn:hover {
+	color: #fefefe;
+	background: #ff1100;
+}
+
+#thx {
+  text-align: center;
+  background-color: #fefefe;
+}
+#error {
+  text-align: center;
+  background-color: #fefefe;
+}
+
+/*-------------------------------------------
+購入履歴
+-------------------------------------------*/
+#historyin{
+  text-align: center;
+  background-color: #fefefe;
+}
+#table_history
+{
+  border-collapse:separate;
+  background-color: #fafafa;
+  margin: 1rem auto;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  table-layout: fixed;
+  text-align: center;
+  width: 300%;
+}
+#table_history a {
+  color: #0008ff; 
+}
+#table_history table {
+  text-align: center;
+  width: 100%;
+}
+#table_history table th{
+  text-align: center;
+  width: 100%;
+  padding: 10px 0;
+}
+#table_history table td{
+  display: flex;
+  text-align: center;
+  width: 100%;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+.total {
+  text-align: center;
+  font-size: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 1.5rem;
+}
+/*-------------------------------------------
+お客様情報
+-------------------------------------------*/
+.customer-output {
+  text-align: center;
+  background-color: #fefefe;
+}
+#comment {
+  text-align: center;
+}
+#customer {
+  margin-top: 2em;
+  width: 50%;
+}
+#customer_table {
+  background-color: #fefefe;
+  padding: 1rem auto;
+  margin: 1rem auto;
+}
+#customer form {
+  text-align: center;
+}
+
+#customer tr {
+  border-bottom: 1px solid #7d7d7d;
+}
+
+#customer th,
+#customer td {
+  padding: 24px 0;
+  width: 100%;
+  border: none;
+}
+
+#customer th {
+  width: 50%;
+}
+
+#okbtn {
+  margin-top: 1rem;
+  display: inline-block;
+  border-radius: 3%;          
+  font-size: 1rem;        
+  text-align: center;      
+  cursor: pointer;     
+  padding: 1rem 3rem;   
+  background: #7f4600;     
+  color: #fefefe;     
+  line-height: 1rem;    
+  opacity: 0.9;        
+  transition: .3s;         
+  box-shadow: 2px 2px 3px #b1b1b1;  
+}
+#okbtn:hover {
+	color: #fefefe;
+	background: #2f1e09;
+}
+
+#customer input {
+  text-align: center;
+}
+/*-------------------------------------------
+新規登録画面
+-------------------------------------------*/
+.newbutton-panel .newbutton {
+  background: #83511b;
+  border: none;
+  color: #fefefe;
+  cursor: pointer;
+  height: 50px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2em;
+  letter-spacing: 0.05em;
+  text-align: center;
+  text-transform: uppercase;
+  transition: background 0.3s ease-in-out;
+  width: 100%;
+}
+
+.newbutton:hover {
+  background: #2f1e09;
+}
+
+.form-footer {
+  font-size: 1em;
+  padding: 2em 0;
+  text-align: center;
+}
+
+/*-------------------------------------------
+ログイン画面
+-------------------------------------------*/
+
+.form-wrapper {
+  background: #fafafa;
+  margin: 3em auto;
+  padding: 0 1em;
+  max-width: 370px;
+}
+
+.form-item {
+  margin-bottom: 0.75em;
+  width: 100%;
+}
+
+.form-item input {
+  background: #fafafa;
+  border: none;
+  border-bottom: 2px solid #e9e9e9;
+  color: #666;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  height: 50px;
+  transition: border-color 0.3s;
+  width: 100%;
+}
+
+.form-item input:focus {
+  border-bottom: 2px solid #c0c0c0;
+  outline: none;
+}
+
+.button-panel {
+  margin: 2em 0 0;
+  width: 100%;
+}
+
+.button-panel .button {
+  background: #83511b;
+  border: none;
+  color: #fefefe;
+  cursor: pointer;
+  height: 50px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2em;
+  letter-spacing: 0.05em;
+  text-align: center;
+  text-transform: uppercase;
+  transition: background 0.3s ease-in-out;
+  width: 100%;
+}
+#favoriteabaut {
+  text-align: center;
+  margin: 1rem auto;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  width: 50%;
+  background-color: #fefefe;
+}
+.button:hover {
+  background: #2f1e09;
+}
+
+.form-footer {
+  font-size: 1em;
+  padding: 2em 0;
+  text-align: center;
+}
+
+/*-------------------------------------------
+ログアウト
+-------------------------------------------*/
+#form-wrapper {
+  margin: 3em auto;
+  padding: 0 1em;
+  max-width: 370px;
+  background-color: #fefefe;
+}
+#form-wrapper  .logoutform {
+  text-align: center;
+  padding-top: 1rem;
+ 
+}
+.logout{
+  text-align: center;
+}
+#outbtn a {
+  margin-top: 1.5rem;
+  display: inline-block;
+  border-radius: 3%;          
+  font-size: 1rem;        
+  text-align: center;      
+  cursor: pointer;     
+  padding: 1rem 3rem;   
+  background: #7f4600;     
+  color: #fefefe;     
+  line-height: 1rem;    
+  opacity: 0.9;        
+  transition: .3s;         
+  box-shadow: 2px 2px 3px #b1b1b1;  
+}
+#outbtn a:hover {
+  background: #2f1e09;
+}
+/*-------------------------------------------
+SP
+-------------------------------------------*/
+@media screen and (max-width: 900px) {
+  #slider .prev,
+  #slider .next {
+    top: 40%;
+  }
+}
+@media only screen and (max-width: 900px) {
+  #table01 th,
+  #table01 td {
+    width: 100%;
+    display: block;
+  }
+
+  #table01 th {
+    width: 100%;
+  }
+
+  #table01 td {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 900px) {
+  nav ul {
+    display: block;
+  }
+
+  nav ul li {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+
+  nav ul li a {
+    padding: 10px;
+    border-bottom: 1px solid #2f1e09;
+  }
+
+  nav ul li a:hover {
+    border-bottom: none;
+    background-color: #fefefe;
+    color: #2f1e09;
+  }
+}
